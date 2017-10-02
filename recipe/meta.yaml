@@ -3,12 +3,13 @@ package:
   version: 1.0
 
 build:
-  number: 0
+  number: 1
   script:
     - cd {{ SP_DIR if SP_DIR is defined else '' }}
     - mkdir backports && cd backports
-    - echo.>__init__.py    # [win]
-    - echo > __init__.py   # [unix]
+    - python -c "open('__init__.py', 'w').close()"
+    - cd {{ SRC_DIR if SRC_DIR is defined else '' }}
+    - python -c "import backports"
 
 requirements:
   build:
