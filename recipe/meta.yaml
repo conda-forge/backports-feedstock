@@ -9,6 +9,7 @@ build:
     - mkdir backports && cd backports
     - python -c "open('__init__.py', 'w').close()"
     - cd {{ SRC_DIR if SRC_DIR is defined else '' }}
+    - python -c "import backports"
 
 requirements:
   build:
