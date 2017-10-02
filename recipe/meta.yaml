@@ -7,8 +7,7 @@ build:
   script:
     - cd {{ SP_DIR if SP_DIR is defined else '' }}
     - mkdir backports && cd backports
-    - echo.>__init__.py    # [win]
-    - echo > __init__.py   # [unix]
+    - python -c "open('__init__.py', 'w').close()"
 
 requirements:
   build:
