@@ -14,14 +14,15 @@ Summary: A package to ensure the `backports` namespace is available.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/backports-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/backports-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/backports-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/backports-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/backports-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/backports-feedstock/branch/master)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/backports-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/backports-feedstock)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/backports/badges/version.svg)](https://anaconda.org/conda-forge/backports)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/backports/badges/downloads.svg)](https://anaconda.org/conda-forge/backports)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-backports-green.svg)](https://anaconda.org/conda-forge/backports) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/backports.svg)](https://anaconda.org/conda-forge/backports) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/backports.svg)](https://anaconda.org/conda-forge/backports) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/backports.svg)](https://anaconda.org/conda-forge/backports) |
 
 Installing backports
 ====================
