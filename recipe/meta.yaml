@@ -25,8 +25,7 @@ test:
 
 about:
   home: http://github.com/conda-forge/backports-feedstock
-  license: BSD 3-Clause
-  license_family: BSD
+  license: BSD-3-Clause
   license_file: {{ RECIPE_DIR if RECIPE_DIR is defined else '' }}/LICENSE.txt
   summary: A package to ensure the `backports` namespace is available.
 
