@@ -8,7 +8,7 @@ build:
   script:
     - cd {{ SP_DIR if SP_DIR is defined else '' }}
     - mkdir -p backports
-    - echo "__path__ = __import__('pkgutil').extend_path(__path__, __name__)" > backports/__init__.py
+    - cp {{ RECIPE_DIR }}/init.py backports/__init__.py
 
 requirements:
   build:
@@ -29,7 +29,7 @@ test:
 about:
   home: http://github.com/conda-forge/backports-feedstock
   license: BSD-3-Clause
-  license_file: {{ RECIPE_DIR if RECIPE_DIR is defined else '' }}/LICENSE.txt
+  license_file: LICENSE.txt
   summary: A package to ensure the `backports` namespace is available.
 
 extra:
