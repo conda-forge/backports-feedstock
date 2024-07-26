@@ -12,19 +12,21 @@ build:
 
 requirements:
   build:
-    - python >=2.7
+    - python >=3
   run:
-    - python >=2.7
+    - python >=3
 
 test:
   requires:
-    - backports.zoneinfo
-    - python 3.8
-    - setuptools 71.0.4
-  imports:
-    - backports
-    - backports.zoneinfo
-    - setuptools
+    - backports.functools_lru_cache
+    - pip
+  commands:
+    - unset PIP_NO_INDEX                      # [unix]
+    - set "PIP_NO_INDEX="                     # [win]
+    - python -m pip install --target alt-site backports.tarfile
+    - export PYTHONPATH="${SP_DIR}:alt-site"  # [unix]
+    - set "PYTHONPATH=%SP_DIR%;alt-site"      # [win]
+    - python -c "import backports.functools_lru_cache; import backports.tarfile"
 
 about:
   home: http://github.com/conda-forge/backports-feedstock
