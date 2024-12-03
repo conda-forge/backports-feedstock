@@ -3,7 +3,7 @@ package:
   version: 1.0
 
 build:
-  number: 4
+  number: 5
   noarch: python
   script:
     - cd {{ SP_DIR if SP_DIR is defined else '' }}
@@ -11,14 +11,15 @@ build:
     - cp {{ RECIPE_DIR }}/init.py backports/__init__.py
 
 requirements:
-  build:
-    - python >=3
+  host:
+    - python {{ python_min }}
   run:
-    - python >=3
+    - python >={{ python_min }}
 
 test:
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - unset PIP_NO_INDEX                      # [unix]
     - set "PIP_NO_INDEX="                     # [win]
